@@ -10,6 +10,7 @@ import (
 func main() {
 	file, e := os.Open("src/io/file/test/Test.txt")
 
+	// 延迟函数，用于关闭文件
 	defer func() {
 		log.Println("文件读取完成")
 		file.Close()
@@ -20,6 +21,7 @@ func main() {
 		return
 	}
 
+	// 声明缓冲区，读取文件
 	bs := make([]byte, 1024, 1024)
 	log.Println("============读取文件内容如下============")
 	for {
