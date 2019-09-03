@@ -21,6 +21,11 @@
 + 创建一个复杂的闭包示例 [src/functional/Sum.go](src/functional/Sum.go)
 + 闭包参数的记忆效应 [src/functional/Accumulate.go](src/functional/Accumulate.go)
 
+## 异常信息
+
++ 使用 errors.New 创建异常信息 [src/error/CreateNewError.go](src/error/CreateNewError.go)
++ 自定义异常 [src/error/CreateSelfError.go](src/error/CreateSelfError.go)
+
 
 
 # 并发
