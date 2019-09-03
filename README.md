@@ -15,6 +15,12 @@
 2. 命名函数返回值 [src/function/funcAndRename.go](src/function/funcAndRename.go)
 3. 返回函数 [src/function/modifyArgFunction.go](src/function/modifyArgFunction.go)
 
+### 闭包(匿名函数)
+
++ 基础用法，返回一个匿名函数 [src/functional/closure.go](src/functional/closure.go)
++ 创建一个复杂的闭包示例 [src/functional/Sum.go](src/functional/Sum.go)
++ 闭包参数的记忆效应 [src/functional/Accumulate.go](src/functional/Accumulate.go)
+
 
 
 # 并发
@@ -40,44 +46,8 @@
 
 ### 官方提供的JSON工具
 
-+ 序列化
-> 代码文件位于 [src/io/json/conversionObjectToJson.go](src/io/json/conversionObjectToJson.go)
-```go
-	// 手动序列化
-	bytes, e := json.Marshal(stu)
-	if e != nil {
-		log.Printf("序列化错误")
-		return
-	}
-	jsonStr := string(bytes)
-	println("序列话内容为:", jsonStr)
-```
-
-+ 反序列化
-
-> 代码文件位于 [src/io/json/ConversionJsonToObject.go](src/io/json/ConversionJsonToObject.go)
-
-```go
-
-	type Address struct {
-		Provide string
-		City    string
-	}
-
-	type Student struct {
-		Name string
-		Age  int
-		Add  Address
-	}
-
-
-
-	data := []byte(`{"Name":"周涛","Age":26,"Add":{"Provide":"安徽省","City":"亳州市"}}`)
-
-	stu := Student{}
-	json.Unmarshal(data, &stu)
-	fmt.Printf("反序列化结果为:%v", stu)
-```
++ 序列化  [src/io/json/conversionObjectToJson.go](src/io/json/conversionObjectToJson.go)
++ 反序列化  [src/io/json/ConversionJsonToObject.go](src/io/json/ConversionJsonToObject.go)
 
 
 # 网络
