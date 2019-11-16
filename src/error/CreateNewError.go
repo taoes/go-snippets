@@ -2,7 +2,7 @@ package main
 
 import (
 	"errors"
-	"log"
+	"github.com/astaxie/beego/logs"
 )
 
 func main() {
@@ -12,11 +12,11 @@ func main() {
 	if err != nil {
 		return
 	}
-	log.Printf("计算结果为:%v/%v=%v", number1, number2, result)
+	logs.Info("计算结果为:%v/%v=%v", number1, number2, result)
 
 	_, err1 := Calculation(5, 0)
 	if err1 != nil {
-		log.Printf("程序出现异常，已退出", err1)
+		logs.Info("程序出现异常，已退出", err1)
 		return
 	}
 

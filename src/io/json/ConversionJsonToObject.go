@@ -18,11 +18,9 @@ func main() {
 		Add  Address
 	}
 
-
-
 	data := []byte(`{"Name":"周涛","Age":26,"Add":{"Provide":"安徽省","City":"亳州市"}}`)
 
 	stu := Student{}
-	json.Unmarshal(data, &stu)
+	_ = json.Unmarshal(data, &stu)
 	fmt.Printf("反序列化结果为:%v", stu)
 }
